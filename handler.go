@@ -359,7 +359,7 @@ func (h *socketHandler) onAck(id int, decoder *decoder, packet *packet) error {
 	return nil
 }
 
-const db1 = true
+const db1 = false
 
 var DbLogMessage = true
 var LogMessage = true
