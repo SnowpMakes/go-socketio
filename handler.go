@@ -244,7 +244,7 @@ func (h *socketHandler) onPacket(decoder *decoder, packet *packet) ([]interface{
 		}
 		// If the message is not recognized by the server, the decoder.currentCloser
 		// needs to be closed otherwise the server will be stuck until the e xyzzy
-		fmt.Printf("Error: %s was not found in h.events\n", message)
+		fmt.Printf("Warning: %s was not found in h.events\n", message)
 		decoder.Close()
 		return nil, nil
 	}
