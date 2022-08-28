@@ -8,10 +8,10 @@ import (
 	"sync"
 	"time"
 
+	"github.com/SnowpMakes/socketio/engineio/message"
+	"github.com/SnowpMakes/socketio/engineio/parser"
+	"github.com/SnowpMakes/socketio/engineio/transport"
 	"github.com/pschlump/json" //	"encoding/json"
-	"github.com/mlsquires/socketio/engineio/message"
-	"github.com/mlsquires/socketio/engineio/parser"
-	"github.com/mlsquires/socketio/engineio/transport"
 )
 
 type MessageType message.MessageType
@@ -134,7 +134,7 @@ func (c *serverConn) NextReader() (MessageType, io.ReadCloser, error) {
 func (c *serverConn) NextWriter(t MessageType) (io.WriteCloser, error) {
 	switch c.getState() {
 	case stateUpgrading:
-		for i := 0; i < 30; i++ {
+		for i := 0; i < 60; i++ {
 			time.Sleep(50 * time.Millisecond)
 			if c.getState() != stateUpgrading {
 				break

@@ -8,10 +8,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mlsquires/socketio/engineio/message"
-	"github.com/mlsquires/socketio/engineio/parser"
-	"github.com/mlsquires/socketio/engineio/polling"
-	"github.com/mlsquires/socketio/engineio/websocket"
+	"github.com/SnowpMakes/socketio/engineio/message"
+	"github.com/SnowpMakes/socketio/engineio/parser"
+	"github.com/SnowpMakes/socketio/engineio/polling"
+	"github.com/SnowpMakes/socketio/engineio/websocket"
 
 	. "github.com/smartystreets/goconvey/convey"
 )

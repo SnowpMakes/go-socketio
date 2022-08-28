@@ -11,13 +11,13 @@ package main
 import (
 	"flag"
 	"fmt"
+	"github.com/SnowpMakes/socketio"
+	"github.com/pschlump/godebug"
 	"log"
 	"net/http"
 	"os"
 
 	"github.com/pschlump/MiscLib"
-	"github.com/pschlump/godebug"
-	"github.com/mlsquires/socketio"
 )
 
 var Port = flag.String("port", "9000", "Port to listen to")                           // 0

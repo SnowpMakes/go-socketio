@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/mlsquires/socketio/engineio/message"
+	"github.com/SnowpMakes/socketio/engineio/message"
 )
 
 // PacketType is the type of packet

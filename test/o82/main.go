@@ -10,14 +10,13 @@ package main
 
 import (
 	"fmt"
+	"github.com/SnowpMakes/socketio"
 	"log"
 	"net/http"
 	"os"
 	"sync"
 
 	flags "github.com/jessevdk/go-flags"
-
-	"github.com/mlsquires/socketio"
 )
 
 var port string = "9000"

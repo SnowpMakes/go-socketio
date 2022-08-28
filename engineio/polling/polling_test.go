@@ -6,9 +6,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/mlsquires/socketio/engineio/message"
-	"github.com/mlsquires/socketio/engineio/parser"
-	"github.com/mlsquires/socketio/engineio/transport"
+	"github.com/SnowpMakes/socketio/engineio/message"
+	"github.com/SnowpMakes/socketio/engineio/parser"
+	"github.com/SnowpMakes/socketio/engineio/transport"
 
 	. "github.com/smartystreets/goconvey/convey"
 )

@@ -1,6 +1,6 @@
 # socketio
 
-A copy of github.com/googollee/go-socket.io renamed with defects fixed and updated to 1.4.5 of socket.io.
+A copy of github.com/googollee/go-socket.io with defects fixed and updated to 1.4.5 of socket.io.
 Also works with 1.7.4 and 2.0.3 of Socket.IO client Javascript.
 
 socketio is an implementation of [socket.io](http://socket.io) in Go (golang).
@@ -16,15 +16,14 @@ This version will be updated on a regular basis with the latest version of socke
 Install the package with:
 
 ```bash
-	go get github.com/mlsquires/socketio
-	go get github.com/pschlump/godebug
+	go get github.com/SnowpMakes/socketio
 	go get github.com/pschlump/MiscLib
 ```
 
 Import it with:
 
 ```go
-	import "github.com/mlsquires/socketio"
+	import "github.com/SnowpMakes/socketio"
 ```
 
 ## Example
@@ -50,8 +49,7 @@ Please check the ./examples/chat directory for more comprehensive examples.
 		"os"
 
 		"github.com/pschlump/MiscLib"
-		"github.com/pschlump/godebug"
-		"github.com/mlsquires/socketio"
+		"github.com/SnowpMakes/socketio"
 	)
 
 	var Port = flag.String("port", "9000", "Port to listen to")                           // 0
@@ -121,21 +119,25 @@ have been made:
 
 1. Renamed the package so that the directory structure matches with the package name.
 Some outside tools depend on this.
-1. Included go-engine.io as a subdirectory.
-1. Fixed defect #68 - "Not Thread Safe".  All accesses to maps are synchronized.
-1. Documentation improvements.
-1. Updated to use the current version of socket.io (1.3.6)
-1. Provided a packed(uglified) version of the JavaScript scoket.io library. A non-uglified version is in the 
+2. Included go-engine.io as a subdirectory.
+3. Fixed defect #68 - "Not Thread Safe".  All accesses to maps are synchronized.
+4. Documentation improvements.
+5. Updated to use the current version of socket.io (1.3.6)
+6. Provided a packed(uglified) version of the JavaScript scoket.io library. A non-uglified version is in the 
 same directory also.
-1. Original defect #95 - Crash occurs when too many arguments are passed - suggested fix used and tested.
-1. Fixed a set of continuous connect/disconnect problems
-1. #45 - incorrect usage - see correct usage in test/o45 - fixed.
-1. #47 - crashing on Windows - unable to reproduce with go 1.3.1 on windows 8.  Appears to be fixed by changes for #68.
-1. #83 - see example in test/o83 - fixed.
-1. #82 - see example in test/o82 - fixed.
-1. #52 - see example in test/o52 - fixed.
-1. #67 - see example in test/o67 - fixed.
-1. Identified the problem where a emit is sent from client to server and server seems to discard/ignore the emit.  This is caused by an invalid paramter and an ignored error message.  Code review for all discarded/ignored error messages in progress.
+7. Original defect #95 - Crash occurs when too many arguments are passed - suggested fix used and tested.
+8. Fixed a set of continuous connect/disconnect problems
+9. #45 - incorrect usage - see correct usage in test/o45 - fixed.
+10. #47 - crashing on Windows - unable to reproduce with go 1.3.1 on windows 8.  Appears to be fixed by changes for #68.
+11. #83 - see example in test/o83 - fixed.
+12. #82 - see example in test/o82 - fixed.
+13. #52 - see example in test/o52 - fixed.
+14. #67 - see example in test/o67 - fixed.
+15. Identified the problem where a emit is sent from client to server and server seems to discard/ignore the emit.  This is caused by an invalid paramter and an ignored error message.  Code review for all discarded/ignored error messages in progress.
+
+This code is from an original https://github.com/mlsquires/socket.io. The following changes have been made:
+2. Changed a timeout value to account for slow connections.
+3. Changed/removed debug messages/formatting to just use log.
 
 ## FAQ
 

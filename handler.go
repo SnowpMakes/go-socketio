@@ -5,8 +5,8 @@ import (
 	"reflect"
 	"sync"
 
-	"github.com/sirupsen/logrus"
 	"github.com/pschlump/godebug"
+	"github.com/sirupsen/logrus"
 )
 
 // PJS - could have it return more than just an error, if "rmsg" and "rbody" - then emit response?
@@ -217,8 +217,8 @@ func (h *socketHandler) onPacket(decoder *decoder, packet *packet) ([]interface{
 	if db1 {
 		fmt.Printf("At:%s\n", godebug.LF())
 	}
-	h.PrintEventsRespondedTo()
 	if DbLogMessage {
+		h.PrintEventsRespondedTo()
 		fmt.Printf("Message [%s] ", message)
 		if db1 {
 			fmt.Printf("%s\n", godebug.LF())
@@ -361,7 +361,7 @@ func (h *socketHandler) onAck(id int, decoder *decoder, packet *packet) error {
 
 const db1 = false
 
-var DbLogMessage = true
+var DbLogMessage = false
 var LogMessage = true
 
 /* vim: set noai ts=4 sw=4: */

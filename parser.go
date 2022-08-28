@@ -8,8 +8,8 @@ import (
 	"io/ioutil"
 	"strconv"
 
+	"github.com/SnowpMakes/socketio/engineio"
 	"github.com/pschlump/json" //	"encoding/json"
-	"github.com/mlsquires/socketio/engineio"
 )
 
 const Protocol = 4
