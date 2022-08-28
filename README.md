@@ -136,8 +136,8 @@ same directory also.
 15. Identified the problem where a emit is sent from client to server and server seems to discard/ignore the emit.  This is caused by an invalid paramter and an ignored error message.  Code review for all discarded/ignored error messages in progress.
 
 This code is from an original https://github.com/mlsquires/socket.io. The following changes have been made:
-2. Changed a timeout value to account for slow connections.
-3. Changed/removed debug messages/formatting to just use log.
+1. Changed a timeout value to account for slow connections.
+2. Changed/removed debug messages/formatting to just use log.
 
 ## FAQ
 
